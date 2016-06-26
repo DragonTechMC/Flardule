@@ -1,0 +1,18 @@
+plugins {
+    id 'org.spongepowered.plugin' version '0.6'
+}
+
+group 'us.illyohs.flardule'
+version '1.0-SNAPSHOT'
+
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile 'org.spongepowered:spongeapi:4.1.0'
+}
