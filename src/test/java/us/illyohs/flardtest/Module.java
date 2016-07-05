@@ -8,40 +8,61 @@ import us.illyohs.flardule.annotation.Flardule;
  * Created by illyohs on 6/26/16.
  */
 @Flardule(name = "Flardule")
-public class Module implements IFlardule {
+public class Module implements IFlardule
+{
+
 
     @Override
-    public void aboutToStart(GameAboutToStartServerEvent event) {
+    public void preInit(GamePreInitializationEvent event)
+    {
 
     }
 
     @Override
-    public void init(GameInitializationEvent event) {
+    public void init(GameInitializationEvent event)
+    {
 
     }
 
     @Override
-    public void loadComplete(GameLoadCompleteEvent event) {
+    public void postInit(GamePostInitializationEvent event)
+    {
 
     }
 
     @Override
-    public void postInit(GamePostInitializationEvent event) {
+    public void aboutToStart(GameAboutToStartServerEvent event)
+    {
 
     }
 
     @Override
-    public void preInit(GamePreInitializationEvent event) {
+    public void serverStarting(GameStartingServerEvent event)
+    {
 
     }
 
     @Override
-    public void serverStopping(GameStoppingServerEvent event) {
+    public void serverStarted(GameStartedServerEvent event)
+    {
 
     }
 
     @Override
-    public void serverStoped(GameStoppedServerEvent event) {
+    public void loadComplete(GameLoadCompleteEvent event)
+    {
+
+    }
+
+    @Override
+    public void serverStopping(GameStoppingServerEvent event)
+    {
+
+    }
+
+    @Override
+    public void serverStopped(GameStoppedServerEvent event)
+    {
 
     }
 }

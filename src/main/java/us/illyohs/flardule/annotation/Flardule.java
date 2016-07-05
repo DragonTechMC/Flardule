@@ -1,24 +1,30 @@
 package us.illyohs.flardule.annotation;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
 /**
  * Created by illyohs on 6/26/16.
  */
-public @interface Flardule {
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface Flardule
+{
 
-    String      name();
+    String name();
 
-    String      author() default "";
+    String[] authors() default "";
 
-    String      url() default "";
+    String url() default "";
 
-    String      description() default "";
+    String description() default "";
 
-    String[]    pluginDeps() default "";
+    String[] pluginDeps() default {""};
 
-    String[]    flarduleDeps() default "";
+    boolean defualtEnable() default true;
 
-    boolean     defualtEnable() default true;
-
-    boolean     hardFail() default true;
+    boolean hardFail() default true;
 
 }
